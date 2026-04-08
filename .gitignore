@@ -17,3 +17,8 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Credentials
+credentials.json
+consultas_onpe.xlsx
+consultas_onpe_final.xlsx
