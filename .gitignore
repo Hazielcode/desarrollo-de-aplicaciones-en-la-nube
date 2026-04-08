@@ -1,0 +1,19 @@
+# Antigravity artifacts
+task.md
+implementation_plan.md
+walkthrough.md
+.gemini/
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
