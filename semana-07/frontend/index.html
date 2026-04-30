@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Balancer Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1>Load Balancer <span>Dashboard</span></h1>
+            <p>Nginx + Node.js (Round Robin Demo)</p>
+        </header>
+
+        <!-- Sección Login -->
+        <section id="auth-section" class="panel active">
+            <h2>Autenticación</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Usuario</label>
+                    <input type="text" id="username" value="admin" required>
+                </div>
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" value="admin" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Login (Generar JWT)</button>
+            </form>
+            <div id="auth-status" class="status-box">Ingresa credenciales (admin/admin).</div>
+        </section>
+
+        <!-- Sección CRUD -->
+        <section id="crud-section" class="panel">
+            <div class="header-action">
+                <h2>Gestor de Items (CRUD)</h2>
+                <button id="logout-btn" class="btn outline-btn">Cerrar Sesión</button>
+            </div>
+            
+            <div class="actions">
+                <button id="btn-fetch" class="btn primary-btn">Refrescar Items (GET)</button>
+                <form id="create-form" class="inline-form">
+                    <input type="text" id="new-item-name" placeholder="Nombre del nuevo item..." required>
+                    <button type="submit" class="btn success-btn">Agregar (POST)</button>
+                </form>
+            </div>
+
+            <div id="items-list" class="items-grid">
+                <!-- Los items se cargarán aquí con JS -->
+            </div>
+            
+            <div id="crud-status" class="status-box">Listo para operar.</div>
+        </section>
+
+        <!-- Etiqueta informativa del Servidor que respondió -->
+        <div class="server-badge">
+            Última respuesta desde: <span id="server-id-display">Esperando petición...</span>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
